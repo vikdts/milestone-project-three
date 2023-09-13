@@ -39,8 +39,14 @@ def say_hello():
             print(f'You entered: {user_input}. Thanks for playing.\n')
 
 
-def validate_input():
-    pass
+def validate_input(message, valid_inputs):
+    # recursive function
+    user_input = input(message)
+    if user_input in valid_inputs:
+        return user_input
+    else:
+        print('Wrong input, try again.')
+        validate_input(message, valid_inputs)
 
 
 def play(board, mines_coords, grid, lives, num_mines):
@@ -86,7 +92,6 @@ def play(board, mines_coords, grid, lives, num_mines):
         return
     render_board(board)
     win_lose(num_cells_dug=len(dug), num_cells_win=num_cells_win)
-
 
 
 def win_lose(num_cells_dug, num_cells_win):

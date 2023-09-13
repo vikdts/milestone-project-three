@@ -101,8 +101,24 @@ def win_lose(num_cells_dug, num_cells_win):
         print("No more lives left. Game over.")
 
 
-def render_board():
-    pass
+def render_board(board):
+    join_rows = []
+    nums_top = ' '.join([str(n) for n in range(0,len(board[0]))])
+
+    for index, row in enumerate(board):
+        row_to_render = []
+        for i in row:
+            str_i = str(i)
+            row_to_render.append(str_i)
+        rendered_row = '|'.join(row_to_render)
+        formatted_rendered__row = f"{index} |{rendered_row}|"
+
+        join_rows.append(formatted_rendered__row)
+    border_str = ''.join(["-" for _ in join_rows[0]])
+    join_rows.append(border_str)
+    formatted_nums_top = f"   {nums_top}"
+    join_rows.insert(0, formatted_nums_top)
+    join_rows.insert(1, border_str)
 
 
 def main():

@@ -25,7 +25,7 @@ def say_hello():
     )
     if user_input == 'b':
         print(f'You entered: {user_input}. You chose beginner.\n')
-        return {'grid':5,'num_mines':24}
+        return {'grid':5,'num_mines':5}
 
     elif user_input == 'i':
         print(f'You entered: {user_input}. You chose intermediate.\n')
@@ -142,3 +142,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

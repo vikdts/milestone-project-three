@@ -14,3 +14,26 @@ def create_board(grid=5, num_mines=5):
         mines_coord.append([row, col])
         plant_mines += 1
     return board, mines_coord
+
+
+def say_hello():
+    while True:
+        try:
+            user_input = input("Hello! This is minesweeper. \nFor Beginner press 'b', for Intermediate press 'i', for Expert press 'e'. \nTo quit press 'q'.")
+        except ValueError:
+            print("""Please enter a valid option.
+            For Beginner press 'b', for Intermediate press 'i', for Expert press 'e'.
+            To quit press 'q'.\n
+            """)
+            continue
+        if user_input == 'b':
+            grid = 5
+            print(f'You entered: {user_input}. You chose beginner.\n')
+        elif user_input == 'i':
+            grid = 7
+            print(f'You entered: {user_input}. You chose intermediate.\n')
+        elif user_input == 'e':
+            grid = 10
+            print(f'You entered: {user_input}. You chose expert.\n')
+        else:
+            print(f'You entered: {user_input}. Thanks for playing.\n')

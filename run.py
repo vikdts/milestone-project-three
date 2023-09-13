@@ -104,3 +104,17 @@ def win_lose(num_cells_dug, num_cells_win):
 def render_board():
     pass
 
+
+def main():
+    lives = 3
+    grid_num_mines = say_hello()
+    if grid_num_mines is None:
+        return
+    board, mines_coord = create_board(grid_num_mines['grid'], grid_num_mines['num_mines'])
+    # print(*board, sep="\n") # each list on new line 
+    # print(mines_coord)
+    play(board, mines_coord, grid_num_mines['grid'], lives, grid_num_mines['num_mines'])
+
+
+if __name__ == '__main__':
+    main()

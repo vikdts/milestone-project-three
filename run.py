@@ -89,8 +89,11 @@ def play(board, mines_coords, grid, lives, num_mines):
 
 
 
-def win_lose():
-    pass
+def win_lose(num_cells_dug, num_cells_win):
+    if num_cells_dug >= num_cells_win:
+        print("Congrats. It's a win.")
+    else:
+        print("No more lives left. Game over.")
 
 
 def render_board():

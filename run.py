@@ -63,7 +63,7 @@ def play(board, mines_coords, grid, lives, num_mines):
             row, col = user_input.split(',')
             row_int = int(row)
             col_int = int(col)
-            if col_int >= grid or row_int >= grid:
+            if any(v not in range(0, grid) for v in (row_int, col_int)):
                 raise ValueError
         except ValueError:
             print("Invalid input.")

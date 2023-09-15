@@ -39,7 +39,7 @@ def say_hello():
 
 
 def validate_input(message, valid_inputs):
-    user_input = input(message)
+    user_input = input(message).lower()
     if user_input in valid_inputs:
         return user_input
     else:

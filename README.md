@@ -1,32 +1,14 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Minesweeper
 
-Welcome,
+Minesweeper is a classic and popular online puzzle single player game. It is all age appropriate. This is not the classic version, which offers clues with numbers of neighboring mines. The outcome depends on random events, to clear the board without detonating any mines.
+The game begins with introduction to the game rules and selection of a difficulty level, beginner internediate or expert, which is based on the grid size. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+Once selected the difficulty level, it renders a board with the hidden cells all marked with '0'. The user is prompted to choose a cell to dig, by giving an input, according to the
+row and column number. If correct and no mine was detonated, a message will indicate to 
+continue with new location to dig and the board, will be rendered with the cleared cell,
+marked with '-'. However, if the user guesses incorrectly, there will be rendered a message
+for hitting a mine. All difficulty levels are given three lives, so the user will be propted
+to choose to continue the game or quit. In ordered to win the player has to clear the board,
+before running out of lives.
 
-## Reminders
-
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+Minesweeper is an interesting and familiar game, that keeps the player engaged, based on simple guessing skills. It is agreat way to have some fun and mine-out!

@@ -13,6 +13,9 @@ before running out of lives.
 
 Minesweeper is an interesting and familiar game, that keeps the player engaged, based on simple guessing skills. It is a great way to have some fun and mine-out!
 
+## Home
+![Welcome](./images/welcome.jpg)
+
 ## Table of Contents
 1. [How to play](##how-to-play)
 2. [Flowchart](#flowchart)

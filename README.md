@@ -193,6 +193,7 @@ The game was manually tested in VS Code, Codeanywhere and Heroku.
 - Cleared cell, type coordinates to continue digging
     - Cannot continue with empty input
     - Must be integers from zero to grid size minus one separated with a comma
+    
 ![coordinates](./images/cleared_cell.jpg)
 
 - Stepped on a mine, lost a life, do you wish to continue

@@ -14,7 +14,9 @@ before running out of lives.
 Minesweeper is an interesting and familiar game, that keeps the player engaged, based on simple guessing skills. It is a great way to have some fun and mine-out!
 
 ## Home
+[Click here to open Minesweeper](https://mine-sweeper-1bc435a9d598.herokuapp.com/)
 ![Welcome](./images/welcome.jpg)
+
 
 ## Table of Contents
 1. [How to play](##how-to-play)
@@ -157,7 +159,7 @@ The game was manually tested in VS Code, Codeanywhere and Heroku.
 | Same coords on mine           | Send message again              | YES  |      |
 | Game over, play again?        | Retrieve a letter               | YES  |      |
 | Game over, play again? new    | Retrieve a letter or word       | YES  |      |
-| You win, play agin?           | Retrieve a letter               | YES  |      |
+| You win, play again?          | Retrieve a letter               | YES  |      |
 
 ## Input validation testing
 

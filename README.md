@@ -11,4 +11,16 @@ for hitting a mine. All difficulty levels are given three lives, so the user wil
 to choose to continue the game or quit. In ordered to win the player has to clear the board,
 before running out of lives.
 
-Minesweeper is an interesting and familiar game, that keeps the player engaged, based on simple guessing skills. It is agreat way to have some fun and mine-out!
+Minesweeper is an interesting and familiar game, that keeps the player engaged, based on simple guessing skills. It is a great way to have some fun and mine-out!
+
+## How to play
+
+In this implementation of Minesweeper you will be prompted to
+choose a difficulty level, based on the grid size. The computer will
+render a board either 5x5, 7x7 or 10x10 accordingly the level diffuculty,
+and randomly distribute mines, corresponding their number to the grid size.
+You will have to guess all the coordinates, avoiding to step on the mines,
+to clear the board without detonating any mines and win the game.
+
+## Logic Flowchart
+![Flowchart](./images/flowchart.jpg)

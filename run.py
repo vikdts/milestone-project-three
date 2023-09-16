@@ -34,7 +34,7 @@ Make sure to check out the rules below.
 The board is divided into cells, with randomly distributed mines.
 Choose the difficulty level, which is based on the grid size.
 The number of mines is equal to the size of the grid.
-Each level is given three lifes,so if stepping on a mine, can to continue.
+Each level is given three lives,so if stepping on a mine, can to continue.
 The end goal is to clear the board without detonating any mines.
     """)
     user_input = validate_input(
@@ -70,7 +70,7 @@ def validate_input(message, valid_inputs):
         return validate_input(message, valid_inputs)
 
 
-def play(board, mines_coords, grid, lifes, num_mines):
+def play(board, mines_coords, grid, lives, num_mines):
     """
     Runs the main game loop, where the user tries to guess
     a mine free cell.
@@ -79,7 +79,7 @@ def play(board, mines_coords, grid, lifes, num_mines):
     dug_mine = []
     num_cells_win = (grid**2) - num_mines
     exit = False
-    while lifes > 0 and len(dug) < num_cells_win:
+    while lives > 0 and len(dug) < num_cells_win:
         try:
             render_board(board)
             user_input = input(f"""\nWhere would you like to dig?
@@ -102,11 +102,11 @@ User input:""")
             print("Use new coordinates.")
             continue
         elif [row_int, col_int] in mines_coords:
-            lifes -= 1
+            lives -= 1
             print("Stepped on a mine.\n")
-            print(f"You have {lifes} lifes left.")
+            print(f"You have {lives} lives left.")
             dig(board, row_int, col_int, dug_mine, '*')
-            if lifes > 0:
+            if lives > 0:
                 choice = validate_input("""Do you want to continue?\n
 Press 'y' to continue or
 'n' to quit.
@@ -122,7 +122,7 @@ User input:""",
         return
 
     render_board(board)
-    win_lose(lifes_left=lifes > 0)
+    win_lose(lives_left=lives > 0)
 
 
 def dig(board, row_coord, col_coord, digging_list, mark):
@@ -133,14 +133,14 @@ def dig(board, row_coord, col_coord, digging_list, mark):
     digging_list.append([row_coord, col_coord])
 
 
-def win_lose(lifes_left):
+def win_lose(lives_left):
     """
     Defines the two outcomes of the game.
     """
-    if lifes_left:
+    if lives_left:
         print("Congratulations. It's a win!")
     else:
-        print("No more lifes left. Game over.")
+        print("No more lives left. Game over.")
 
 
 def render_board(board):
@@ -182,9 +182,9 @@ def main():
     on the rendered board with a dash. If guess coordinates step on a
     mine player loses a life, and have to choose if to continue.
     The player wins the game if guesses all the mine free cells,
-    before losing all its lifes.
+    before losing all its lives.
     """
-    lifes = 3
+    lives = 3
     grid_num_mines = say_hello()
     # Returns none to exit the game
     if grid_num_mines is None:
@@ -192,7 +192,7 @@ def main():
     # takes arguments to create the board size chosen by the user
     board, mines_coord = create_board(grid_num_mines['grid'],
                                       grid_num_mines['num_mines'])
-    play(board, mines_coord, grid_num_mines['grid'], lifes,
+    play(board, mines_coord, grid_num_mines['grid'], lives,
          grid_num_mines['num_mines'])
     # Ask if player wants to play again
     user_input = validate_input(

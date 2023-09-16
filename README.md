@@ -13,6 +13,25 @@ before running out of lives.
 
 Minesweeper is an interesting and familiar game, that keeps the player engaged, based on simple guessing skills. It is a great way to have some fun and mine-out!
 
+## Table of Contents
+1. [How to play](##how-to-play)
+2. [Flowchart](#flowchart)
+3. [User Experience](#user-experience)
+4. [Features](#features)
+- [Existing Features](#existing-features)
+- [Features Left to Implement](#features-left-to-implement)
+5. [Technologies](#technologies)
+6. [Frameworks, Libraries & Programs](#frameworks,-libraries-&-programs)
+7. [Testing](#testing)
+8. [Manual Testing](#manual-testing)
+9. [Input validation testing](#input-validation-testing)
+10. [Fixed Bugs](#fixed-bugs)
+11. [Deployment](#deployment)
+- [Heroku](#heroku)
+- [Fork](#fork)
+- [Clone](#clone)
+12. [Credits](#credits)
+
 ## How to play
 
 In this implementation of Minesweeper you will be prompted to
